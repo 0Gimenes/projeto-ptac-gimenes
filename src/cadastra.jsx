@@ -3,22 +3,22 @@ import { Link} from "react-router-dom";
 import { useEffect } from "react";
 
 export default function cadastra() {
-    const listaLocalStorage = JSON.parse(localStorage.getItem("Lista"));
-    const [atividade, setAtividade] = useState("");
-    const [lista, setLista] = useState( listaLocalStorage || []);
-    const [id, setId] = useState(listaLocalStorage [listaLocalStorage.length - 1]?.id + 1 || 1);
+    const listaLocalStorage = JSON.parse(localStorage.getItem("Lista")) || [];
+    const [musicav, setmusicav] = useState("");
+    const [lista, setLista] = useState( listaLocalStorage);
     const [nome, setnome] = useState("");
     const [url, seturl] = useState("");
     const [artista, setartista] = useState("");
     const [letra, setletra] = useState("");
 
+    const [id, setId] = useState(listaLocalStorage [listaLocalStorage.length - 1]?.id + 1 || 1);
 
     useEffect(()=>{localStorage.setItem("Lista", JSON.stringify(lista))},[lista]);
 
     const salvar = (e) => {
         e.preventDefault();
         setLista([...lista, {
-            atividade: atividade,
+            musicav:musicav,
             id: id,
             nome:nome,
             letra:letra,
@@ -26,7 +26,7 @@ export default function cadastra() {
             artista: artista
         }]);
         setId(id + 1);
-        setAtividade("");
+        setmusicav("");
     };
     const remover = (id) => {
 
@@ -73,17 +73,26 @@ export default function cadastra() {
                 <button>ADICIONAR</button>
             </form>
 
-            {lista.map((ativ) =>
-                <ul key={ativ.id}>
-                    <Link to={`/detalhe/${ativ.id}`}>
-                        <li>{ativ.album} </li>
+            {lista.map((music) =>
+                <ul key={music.id}>
+                    <Link to={`/detalhe/${music.id}`}>
+                        <li>{music.nome} </li>
                     </Link>
                     <li>
-                        <p>Nome: {ativ.album}</p>
-                        <p>Musica: {ativ.musica}</p>
-                        <p>Tempo: {ativ.tempo}</p>
-                        <p>Tempo: {ativ.tempo}</p>
-                        <button onClick={() => remover(ativ.id)}>Remover</button>
+                        <p>Nome: {music.nome}</p>
+                        <p>url: {music.url}</p>
+                        <p>Tempo: {music.artista}</p>
+                        <p>Tempo: {music.letra}</p>
+
+                        <iframe
+                        width="1280" 
+                        height="720" 
+                        src={`https://www.youtube.com/embed/${music.url.slice(17)}`}
+                        title="COMO VOAR SEM TER UM PARAQUEDAS! - VLOG DE 1 HORA" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen></iframe>
+                        <button onClick={() => remover(music.id)}>Remover</button>
                     </li>
                 </ul>
             )}
