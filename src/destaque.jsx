@@ -6,7 +6,8 @@ export default function destaque() {
     return (
         <div>
             
-            
+         
+ 
             {listaLocalStorage.map(( music )=><Card music ={music}/> )}
         </div>
 

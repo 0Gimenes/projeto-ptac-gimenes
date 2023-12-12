@@ -44,15 +44,13 @@ export default function cadastra() {
         <div class="container">
             <Link to="/">home</Link>
             <img class = "jukebox" src="https://o.remove.bg/downloads/34c3af20-9a3c-4b9a-9b36-42690e5dcbeb/jukebox-classic-pequeno-_27296-01-removebg-preview.png"></img>
-            <h1>Lista de Musicas 🎸</h1>
+            <h1>Cadastro de VideoMusic🎸</h1>
             <form onSubmit={salvar}>
 
                 <h4><i>Nome</i></h4>  
                 <input type="text"
                     value={nome}
                     onChange={(e) => { setnome(e.target.value) }} />
-               
-          
       
 <h4><i>Url</i></h4>
             <input type="text"
@@ -85,13 +83,14 @@ export default function cadastra() {
                         <p>Letra: {music.letra}</p>
 
                         <iframe
-                        width="1280" 
-                        height="720" 
+                        width="780" 
+                        height="520" 
                         src={`https://www.youtube.com/embed/${music.url.slice(17)}`}
                         title="COMO VOAR SEM TER UM PARAQUEDAS! - VLOG DE 1 HORA" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         allowfullscreen></iframe>
+                        <br></br>
                         <button onClick={() => remover(music.id)}>Remover</button>
                     </li>
                 </ul>

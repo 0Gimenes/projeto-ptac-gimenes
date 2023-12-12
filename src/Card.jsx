@@ -6,8 +6,8 @@ const musicID =music.url.slice(17)
         <div>
 <h4>{music.url}</h4>
 <iframe
-                        width="900" 
-                        height="720" 
+                        width="780" 
+                        height="520" 
                         src={`https://www.youtube.com/embed/${music.url.slice(musicID)}`}
                         title="COMO VOAR SEM TER UM PARAQUEDAS! - VLOG DE 1 HORA" 
                         frameborder={0} 
