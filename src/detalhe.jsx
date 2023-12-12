@@ -14,6 +14,6 @@ return null;
 console.log(lista);
 
 return(
-    <Card atividade={atividade[0]}/>
+    <Card atividade={atividade}/>
 );
 }

@@ -48,7 +48,6 @@ export default function cadastra() {
     return (
         <div class="container">
             <Link to="/">home</Link>
-            <img class = "jukebox" src="https://o.remove.bg/downloads/34c3af20-9a3c-4b9a-9b36-42690e5dcbeb/jukebox-classic-pequeno-_27296-01-removebg-preview.png"></img>
             <h1>Cadastro de VideoMusic🎸</h1>
             <form onSubmit={salvar}>
 

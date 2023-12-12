@@ -8,10 +8,10 @@ export default function Home() {
             <h1>Home</h1>
             
             
-            <Link to="/Cadastra">cadastra</Link>
+            <Link to="/Cadastra">Cadastra</Link>
             <br>
             </br>
-            <Link to="/Destaque">destaque</Link>
+            <Link to="/Destaque">Destaque</Link>
             <br>
             </br>
             <Link to="/Detalhe">Detalhe</Link>
