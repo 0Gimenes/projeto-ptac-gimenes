@@ -9,6 +9,8 @@ export default function cadastra() {
     const [nome, setnome] = useState("");
     const [url, seturl] = useState("");
     const [artista, setartista] = useState("");
+    const [canal, setcanal] = useState("");
+    const [tempo, settempo] = useState("");
     const [letra, setletra] = useState("");
 
     const [id, setId] = useState(listaLocalStorage [listaLocalStorage.length - 1]?.id + 1 || 1);
@@ -23,7 +25,10 @@ export default function cadastra() {
             nome:nome,
             letra:letra,
             url: url,
-            artista: artista
+            artista: artista,
+            tempo : tempo,
+            canal: canal
+
         }]);
         setId(id + 1);
         setmusicav("");
@@ -66,6 +71,14 @@ export default function cadastra() {
                        <input type="text"
                     value={letra}
                     onChange={(e) => { setletra(e.target.value) }} />
+<h4><i>tempo</i></h4>
+<input type="text"
+                    value={tempo}
+                    onChange={(e) => { settempo(e.target.value) }} />
+<h4><i>Canal</i></h4>
+<input type="text"
+                    value={canal}
+                    onChange={(e) => { setcanal(e.target.value) }} />
 <br></br>
 <br></br>
                 <button>ADICIONAR</button>
