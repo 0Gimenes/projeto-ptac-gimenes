@@ -8,7 +8,7 @@ export default function destaque() {
             
          
  
-            {listaLocalStorage.map(( music )=><Card music ={music}/> )}
+            {listaLocalStorage.slice(-4).map(( music )=><Card music ={music}/> )}
         </div>
 
     );

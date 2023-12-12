@@ -12,6 +12,11 @@ export default function Home() {
             <br>
             </br>
             <Link to="/Destaque">destaque</Link>
+            <br>
+            </br>
+            <Link to="/Detalhe">Detalhe</Link>
+            <br>
+            </br>
             {listaLocalStorage.map(( music )=><Card music ={music}/> )}
         </div>
 
