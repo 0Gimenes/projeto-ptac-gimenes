@@ -6,7 +6,7 @@ export default function destaque() {
     return (
         <div>
             
-         
+         <h1>Músicas em Alta📈</h1>
  
             {listaLocalStorage.slice(-4).map(( music )=><Card music ={music}/> )}
         </div>

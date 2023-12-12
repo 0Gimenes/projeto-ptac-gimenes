@@ -4,7 +4,7 @@ export default function Card({music}){
 const musicID =music.url.slice(17)
     return(
         <div>
-<h4>{music.url}</h4>
+<br></br>
 <iframe
                         width="780" 
                         height="520" 
@@ -13,7 +13,7 @@ const musicID =music.url.slice(17)
                         frameborder={0} 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         allowFullScreen></iframe>
-                        <h6>{music.letra}</h6>
+                       
         </div>
     )
     

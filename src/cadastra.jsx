@@ -47,8 +47,7 @@ export default function cadastra() {
     }
     return (
         <div class="container">
-            <Link to="/">home</Link>
-            <h1>Cadastro de VideoMusic🎸</h1>
+            <h1>Cadastro de Videos</h1>
             <form onSubmit={salvar}>
 
                 <h4><i>Nome</i></h4>  
