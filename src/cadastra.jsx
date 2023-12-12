@@ -81,8 +81,8 @@ export default function cadastra() {
                     <li>
                         <p>Nome: {music.nome}</p>
                         <p>url: {music.url}</p>
-                        <p>Tempo: {music.artista}</p>
-                        <p>Tempo: {music.letra}</p>
+                        <p>Artista: {music.artista}</p>
+                        <p>Letra: {music.letra}</p>
 
                         <iframe
                         width="1280" 

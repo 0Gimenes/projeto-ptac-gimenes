@@ -1,14 +1,14 @@
 export default function Card({music}){
     console.log(music)
 
-
+const musicID =music.url.slice(17)
     return(
         <div>
-<h4>{music.nome}</h4>
+<h4>{music.url}</h4>
 <iframe
                         width="900" 
                         height="720" 
-                        src={`https://www.youtube.com/embed/${music.url.slice(17)}`}
+                        src={`https://www.youtube.com/embed/${music.url.slice(musicID)}`}
                         title="COMO VOAR SEM TER UM PARAQUEDAS! - VLOG DE 1 HORA" 
                         frameborder={0} 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
